@@ -1,0 +1,32 @@
+{
+  "name": "erc-20-implementation",
+  "version": "1.0.0",
+  "description": "ERC-20 Implementation",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile --show-stack-traces",
+    "test": "npx hardhat test test/Test_Token.js",
+    "deploy-to-hardhat": "npx hardhat run scripts/deployToken.js --network hardhat",
+    "deploy-to-test": "npx hardhat run scripts/deployToken.js --network polygon_amoy",
+    "verify-on-test": "npx hardhat verify --contract contracts/Token.sol:Token --show-stack-traces --network polygon_amoy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashfaq-emote/erc-20.git"
+  },
+  "author": "Ashfaq Shaik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashfaq-emote/erc-20/issues"
+  },
+  "homepage": "https://github.com/ashfaq-emote/erc-20#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18"
+  }
+}
