@@ -6,8 +6,9 @@ import "./governance/Governed.sol";
 
 contract Token is ERC20, Governed {
 
-    constructor() ERC20("Test Token", "TSTX1") {
+    constructor() ERC20("Test Token", "TSTX2") {
         owner = msg.sender;
+        _mint(msg.sender, 10_000_000_000 * 10 ** decimals());
     }
 
     function whoOwnsToken() public view returns (address) {
